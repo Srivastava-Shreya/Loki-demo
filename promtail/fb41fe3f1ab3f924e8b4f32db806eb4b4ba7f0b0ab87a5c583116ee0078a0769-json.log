@@ -1,0 +1,11 @@
+{"log":" * Serving Flask app 'server'\n","stream":"stdout","time":"2022-12-18T14:30:12.668729453Z"}
+{"log":" * Debug mode: off\n","stream":"stdout","time":"2022-12-18T14:30:12.668809437Z"}
+{"log":"\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n","stream":"stderr","time":"2022-12-18T14:30:12.670582061Z"}
+{"log":" * Running on all addresses (0.0.0.0)\n","stream":"stderr","time":"2022-12-18T14:30:12.670638269Z"}
+{"log":" * Running on http://127.0.0.1:5100\n","stream":"stderr","time":"2022-12-18T14:30:12.670642866Z"}
+{"log":" * Running on http://172.17.0.2:5100\n","stream":"stderr","time":"2022-12-18T14:30:12.670650637Z"}
+{"log":"\u001b[33mPress CTRL+C to quit\u001b[0m\n","stream":"stderr","time":"2022-12-18T14:30:12.670654153Z"}
+{"log":"172.17.0.1 - - [18/Dec/2022 14:30:48] \"GET /getMovie?user=123\u0026movie=456 HTTP/1.1\" 200 -\n","stream":"stderr","time":"2022-12-18T14:30:48.799770854Z"}
+{"log":"172.17.0.1 - - [18/Dec/2022 14:30:48] User 123 requested to watch movie 456","stream":"stderr","time":"2022-12-18T14:30:48.799770854Z"}
+{"log":"172.17.0.1 - - [18/Dec/2022 14:30:48] User 123 requested to watch movie 456","stream":"stderr","time":"2022-12-18T14:30:48.799770854Z"}
+{"log":"172.17.0.1 - - [18/Dec/2022 14:30:48] User 123 requested to watch movie 456","stream":"stderr","time":"2022-12-18T14:30:48.799770854Z"}

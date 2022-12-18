@@ -1,0 +1,39 @@
+
+version: "3"
+
+networks:
+  loki:
+services:
+  loki:
+    image: grafana/loki:2.4.0
+    volumes:
+      - ./loki:/etc/loki
+    command: "-config.file=/etc/loki/loki-config.yml"
+    ports:
+      - 3100:3100
+    restart: unless-stopped
+    networks: 
+      - loki
+
+  promtail:
+    image: grafana/promtail:2.4.0
+    volumes:
+      # var/log in case of linux systems
+      - ./var/:/var/log
+      - ./promtail:/etc/promtail
+    restart: unless-stopped
+    command: -config.file=/etc/promtail/promtail-config.yml
+    networks:
+      - loki
+
+  grafana:
+    image: grafana/grafana:latest
+    # Use id on the system to find out the user id
+    user: "197609"
+    volumes: 
+      - ./grafana:/var/lib/grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - loki

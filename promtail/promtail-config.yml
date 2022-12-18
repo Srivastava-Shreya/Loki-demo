@@ -1,0 +1,25 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://localhost:3100/loki/api/v1/push
+
+scrape_configs:
+- job_name: systema
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: server
+      __path__: /var/lib/docker/containers/561b53013031*/561b53013031*.log
+- job_name: systemb
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: mlserver
+      __path__: /var/lib/docker/containers/bc0a9afe785c*/bc0a9afe785c*.log
